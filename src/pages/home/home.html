@@ -1,0 +1,48 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/logo.svg">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title style="text-align: center;" >Que comerémos hoy?</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg-image">
+
+      <ion-item  (click)="BuscarRuleta()">
+        <ion-thumbnail item-start style="    min-width: 40px; min-height: 40px;">
+          <img src="{{Imagen}}" style="    width: 40px; height: 40px;">
+        </ion-thumbnail>
+        <h2 style=" font-weight: bold;"  >{{DietaSeleccionada}}</h2>
+        <ion-icon name="arrow-dropright" item-end></ion-icon>
+      </ion-item>
+   
+  
+
+ 
+        <br>
+        <div style="text-align: center">
+          <div>
+              <img  id="prizePointer" src="assets/win.png" alt="V" />
+          </div>
+          
+
+          <canvas class="canvasContainer" #canvas id='canvas' width='260%' height='269%'>
+            Canvas not supported, use another rowser.
+        </canvas>
+        
+  </div>
+
+<div style="margin: 10px;">
+  <button ion-button (click)="theWheel.startAnimation() " value="Girar"  block color="primary">Girar Ruleta</button>
+
+</div>
+
+</ion-content>

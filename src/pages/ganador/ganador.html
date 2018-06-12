@@ -1,0 +1,34 @@
+
+
+
+
+<ion-content   class="bg-image">
+
+    <ion-card>
+      
+        <ion-card-content class="winner-image" >
+        <div style="height: 190px;">
+            <ion-card-title style="text-align: center; padding-top: 70px;">
+                {{ganador}} 
+             </ion-card-title>
+         </div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+      
+          <ion-card-content>
+         
+            <h2 style="font-weight: bold; text-align: center">
+              {{Titulo}}
+            </h2>
+            <br>
+            <p>{{Texto}}</p>
+          </ion-card-content>
+        </ion-card>
+
+        <div style="margin: 10px;">
+            <button ion-button (click)="Terminar() " value="Girar"  block color="primary">Aceptar</button>
+          </div>
+
+</ion-content>

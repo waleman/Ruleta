@@ -1,0 +1,52 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Crear una nueva dieta</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+
+        <ion-item>
+          <ion-label stacked>Nombre de la dieta</ion-label>
+          <ion-input type="text" [(ngModel)]="Nombre" placeholder="Mi dieta" ></ion-input>
+        </ion-item>
+ 
+        <ion-slides pager="true" (ionSlideDidChange)="imagenSlide()">
+            <ion-slide *ngFor="let item of Imagen">
+                <ion-item style="text-align: center">
+                    <img style="width: 30%; height: 30%;"  src="{{item.Direccion}}">
+                </ion-item>
+            </ion-slide>
+        </ion-slides>
+  
+        <ion-item  style="text-align: center">
+            <button ion-button   style="min-width: 50%;" (click)="CrearPlatillo()" >
+                Agregar un platillo
+            </button>
+            <button ion-button color="purple" style="min-width: 50%;" (click)="Guardar()"  >
+                    Guardar
+           </button>
+        </ion-item>
+
+        <ion-list-header>
+          <h2>Platillos agregados</h2>
+          </ion-list-header>
+
+          <ion-item *ngFor="let item of Lista; let i= index" (click)="Eliminar(i)">
+              {{item.text}}
+            <ion-icon name="trash" color="danger" item-end></ion-icon>
+          </ion-item>
+         
+     </ion-list>
+
+    
+  
+
+
+</ion-content>

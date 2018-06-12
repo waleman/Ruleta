@@ -1,0 +1,27 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Crear platillos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+
+        <ion-item>
+          <ion-label fixed>Nombre</ion-label>
+          <ion-input type="text" [(ngModel)]="platillo" placeholder="Mi platillo" maxlength="12"></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button color="purple" (click)="Guardar()"  >
+        Guardar
+    </button>
+    <button ion-button color="danger" (click)="Cancelar()"  >
+        Cancelar
+    </button>
+
+</ion-content>
